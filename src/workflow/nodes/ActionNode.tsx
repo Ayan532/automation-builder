@@ -87,17 +87,12 @@ const ActionNode = ({ data, selected }: NodeProps) => {
     );
   }
 
-  // If there's a condition, add a conditional label at the top
-  const showConditionLabel = data.condition && data.condition !== '';
+
 
   return (
     <div className={`node action-node ${selected ? 'selected' : ''}`}>
       <div className="bg-white rounded-lg shadow border border-gray-200 overflow-hidden">
-        {showConditionLabel && (
-          <div className="text-xs font-medium bg-amber-100 text-amber-800 px-2 py-1">
-            Condition: {data.condition === 'default' ? 'Default Branch' : data.condition}
-          </div>
-        )}
+      
         <div className={`${appColor} py-2 px-3 flex items-center justify-between`}>
           <div className="flex items-center space-x-2">
             <div className="w-5 h-5 rounded flex items-center justify-center bg-white">
