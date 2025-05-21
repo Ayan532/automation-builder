@@ -14,7 +14,7 @@ function App() {
     <div style={{height:'100vh',width:'100vw'}} className='w-full h-screen '>
       <ReactFlowProvider>
 
-    <WorkflowBuilder/>
+      <WorkflowBuilder/>
       </ReactFlowProvider>
 
 

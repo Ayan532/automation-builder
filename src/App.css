@@ -1,0 +1,212 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.jodit-status-bar-link {
+  display: none;
+}
+
+.emoji-text {
+  font-family: 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+}
+
+.jodit-react-container  ul {
+  list-style-type: disc; /* Bullet points for unordered lists */
+  margin-left: 20px; /* Optional: Adjust indentation */
+}
+.jodit-react-container  ol {
+  list-style-type: decimal; /* Numbers for ordered lists */
+  margin-left: 20px; /* Optional: Adjust indentation */
+}
+
+
+/* .react-flow__panel{
+  display: none;
+} */
+
+
+
+/* removing the autofill background color */
+
+/* Change the white to any color */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #000000;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px #0000;
+}
+
+
+.dark {
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+    transition: background-color 5000s ease-in-out 0s;
+    box-shadow: inset 0 0 20px 20px #0000;
+  }
+}
+
+
+/* HTML: <div class="ribbon">Your text content</div> */
+/* HTML: <div class="ribbon">Your text content</div> */
+.ribbon {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+.ribbon {
+  --r: .4em; /* control the ribbon shape (the radius) */
+  --c: #E3AD40;
+
+  position: absolute;
+  bottom: 5px;
+  right: calc(-1*var(--r));
+  line-height: 1.3; 
+  padding: calc(2*var(--r)) .5em 0;
+  border-radius: 0 var(--r) var(--r) 0;
+  background: 
+    radial-gradient(100% 50% at right,var(--c) 98%,#0000 101%)
+     0 100%/.5lh calc(100% - 2*var(--r)),
+    radial-gradient(100% 50% at left,#0005 98%,#0000 101%) 
+     100% 0/var(--r) calc(2*var(--r)),
+    conic-gradient(at calc(100% - var(--r)) calc(2*var(--r)),var(--c) 75%,#0000 0)
+     100% 0/calc(101% - .5lh) 100%;
+  background-repeat: no-repeat;   
+}
+
+.loader-wrapper {
+  perspective: 800px;
+}
+
+
+.button-edge__label {
+  position: absolute;
+  pointer-events: all;
+  transform-origin: center;
+}
+ 
+.button-edge__button {
+  width: 30px;
+  height: 30px;
+  border: 5px solid #f7f9fb;
+  color: var(--xy-edge-label-color-default);
+  background-color: #f3f3f4;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 12px;
+  padding-top: 0px;
+}
+ 
+.button-edge__button:hover {
+  background-color: var(--xy-theme-hover);
+  color: #ffffff;
+}
+
+
+.node {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  width: 280px;
+}
+.node:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+.node.selected {
+  box-shadow: 0 0 0 2px #6366f1, 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+}
+
+/* Handle styles */
+.handle {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.node:hover .handle, .node.selected .handle {
+  opacity: 1;
+}
+
+/* ReactFlow custom styling */
+.react-flow__node {
+  cursor: pointer;
+}
+
+.react-flow__controls {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.react-flow__controls-button {
+  background-color: white;
+  border-bottom: 1px solid #f1f1f1;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.react-flow__edge-path {
+  stroke-width: 2;
+}
+
+.react-flow__attribution {
+  display: none;
+}
+
+.react-flow__background {
+  background-color: #fafafa;
+  background-image: 
+    linear-gradient(rgba(220, 220, 220, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(220, 220, 220, 0.3) 1px, transparent 1px);
+  background-size: 15px 15px;
+}
+
+.react-flow__minimap {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Animation for connection lines */
+@keyframes dashOffset {
+  to {
+    stroke-dashoffset: 20;
+  }
+}
+
+.connecting-edge {
+  animation: dashOffset 1s linear infinite;
+  stroke-dasharray: 5 5;
+}
+
+/* Tooltip styles */
+.tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  pointer-events: none;
+  z-index: 1000;
+  white-space: nowrap;
+}
+

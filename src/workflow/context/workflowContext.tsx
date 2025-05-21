@@ -6,6 +6,7 @@ import {
   type ReactNode,
   useMemo
 } from 'react';
+
 import {
   type Node,
   type Edge,
@@ -16,7 +17,6 @@ import {
   MarkerType,
   type XYPosition
 } from 'reactflow';
-import { toast } from 'sonner';
 
 interface WorkflowContextType {
   nodes: Node[];
